@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("http://fonts.googleapis.com/css?family=lato&display=swap");
 
 
 /*this gives the webpage a container that will later slide over with javascript*/
@@ -9,14 +9,76 @@
 /*styling the body*/
 body {
     font-family: "lato", sans-serif;
-    background-color: #3333;
+    background-color: #333;
     color: #222;
     /*overflow on x axis makes it so you wont scroll side to side but you can still scroll on the y axis or up and down.*/
     overflow-x: hidden;
     margin: 0;
 }
 
+/*I used pre for quotes paragraph to keep its sentence structure but that also kept the orginal font, this changes the font to the same as the rest of the document.*/
+#quote {
+    font-family: inherit;
+}
+
 /**/
 .container {
     background-color: #fafafa;
+    /*transform origin be default starts in the middle, we can change this by using the transform-origin and dictating top left*/
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+/*this will reveal teh nav bar when the open button is activated.*/
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle {
+    background-color: #ff7979;
+    /*if i change the height and width i will also need to go to circle-container and change the top and left as well.*/
+    height: 200px;
+    width:200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+/*this give my close button its properties*/
+.cirlce button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+}
+
+.circle button:focus {
+    outline: none;
+}
+
+.circle button#open {
+    left: 60%;
+}
+
+.circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.content img {
+    max-width: 100%;
 }
