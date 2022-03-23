@@ -69,16 +69,18 @@ body {
     outline: none;
 }
 
+/*this is the 3 line icon menu button properties*/
 .circle button#open {
     left: 60%;
 }
-
+/*this is the x close button properties*/
 .circle button#close {
     top: 60%;
     transform: rotate(90deg);
     transform-origin: top left;
 }
 
+/*makes it so the image takes up the full width without squishing the image*/
 .content img {
     max-width: 100%;
 }
