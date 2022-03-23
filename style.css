@@ -1,0 +1,22 @@
+@import url("http://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+
+/*this gives the webpage a container that will later slide over with javascript*/
+* {
+    box-sizing: border-box;
+}
+
+/*styling the body*/
+body {
+    font-family: "lato", sans-serif;
+    background-color: #3333;
+    color: #222;
+    /*overflow on x axis makes it so you wont scroll side to side but you can still scroll on the y axis or up and down.*/
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/**/
+.container {
+    background-color: #fafafa;
+}
