@@ -1,7 +1,7 @@
 @import url("http://fonts.googleapis.com/css?family=lato&display=swap");
 
 
-/*this gives the webpage a container that will later slide over with javascript*/
+/*this gives the webpage a border */
 * {
     box-sizing: border-box;
 }
@@ -53,8 +53,14 @@ body {
     transition: transform 0.5s linear;
 }
 
+/**/
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+}
+
 /*this give my close button its properties*/
-.cirlce button {
+.circle button {
+    cursor: pointer;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -80,7 +86,76 @@ body {
     transform-origin: top left;
 }
 
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+/*this gives the nav bar its properties*/
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+/*this gives the list its properties*/
+nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+/*this gives the actual list items there properties*/
+nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in; 
+}
+
+/**/
+nav ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/*this makes the liB stick out from liA*/
+nav ul li + li {
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+/*this makes the liC stick out more form liB and even more than liA*/
+nav ul li + li + li {
+    margin-left: 30px;
+    transform: translateX(-200%);
+    }
+
 /*makes it so the image takes up the full width without squishing the image*/
 .content img {
     max-width: 100%;
+}
+
+/*content properties*/
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+/*In other news' properties*/
+.content h1 {
+    margin: 0;
+}
+
+/*morbo the annihilator properties*/
+.content small {
+    color: #555;
+    font-style: italic;
+}
+
+/*quotes and morbos bio properties*/
+.content p #quote {
+    color: #333;
+    line-height: 1.5;
 }
